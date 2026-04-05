@@ -127,10 +127,6 @@ nox-core/
 │   ├── graph-builder.test.cpp
 │   ├── metrics-engine.test.cpp
 │   └── exporter.test.cpp
-└── libs/
-    ├── Cimmerian/
-    ├── Firefly/
-    └── nlohmann/
 ```
 
 ______________________________________________________________________

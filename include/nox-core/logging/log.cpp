@@ -1,21 +1,18 @@
-#include <firefly/log.hpp>
 #include "log.hpp"
+#include <firefly/log-registry.hpp>
 
 namespace NoxCore {
 
 namespace Logging {
 
-void Log::init(bool enableClientDebugLogging)
+void Log::Init(bool enableClientDebugLogging)
 {
-  Firefly::Logging::LogRegistry::registerLogger(FIREFLY_DEFAULT_LOGGER, enableClientDebugLogging);
+  Firefly::LogRegistry::RegisterLogger(FIREFLY_DEFAULT_LOGGER, enableClientDebugLogging);
 }
 
-void Log::init(std::string fileName, bool enableClientDebugLogging)
+void Log::Init(std::string fileName, bool enableClientDebugLogging)
 {
-  Firefly::Logging::LogRegistry::registerLogger(
-      FIREFLY_DEFAULT_LOGGER, fileName, enableClientDebugLogging
-  );
+  Firefly::LogRegistry::RegisterLogger(FIREFLY_DEFAULT_LOGGER, fileName, enableClientDebugLogging);
 }
 }  // namespace Logging
-
 }  // namespace NoxCore
