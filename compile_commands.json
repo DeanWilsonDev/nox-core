@@ -1,0 +1,122 @@
+[
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/nlohmann_json-src/include -std=gnu++20 -Winvalid-pch -x c++-header -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx -o CMakeFiles/nox-core.dir/cmake_pch.hxx.gch -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx.cxx",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx.cxx",
+  "output": "CMakeFiles/nox-core.dir/cmake_pch.hxx.gch"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/nlohmann_json-src/include -std=gnu++20 -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx -o CMakeFiles/nox-core.dir/src/main.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/main.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/main.cpp",
+  "output": "CMakeFiles/nox-core.dir/src/main.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/nlohmann_json-src/include -std=gnu++20 -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx -o CMakeFiles/nox-core.dir/src/parser.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/parser.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/parser.cpp",
+  "output": "CMakeFiles/nox-core.dir/src/parser.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/nlohmann_json-src/include -std=gnu++20 -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx -o CMakeFiles/nox-core.dir/src/dependency-graph.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/dependency-graph.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/dependency-graph.cpp",
+  "output": "CMakeFiles/nox-core.dir/src/dependency-graph.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/nlohmann_json-src/include -std=gnu++20 -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx -o CMakeFiles/nox-core.dir/src/metrics-engine.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/metrics-engine.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/metrics-engine.cpp",
+  "output": "CMakeFiles/nox-core.dir/src/metrics-engine.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/nlohmann_json-src/include -std=gnu++20 -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx -o CMakeFiles/nox-core.dir/src/exporter.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/exporter.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/exporter.cpp",
+  "output": "CMakeFiles/nox-core.dir/src/exporter.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/nlohmann_json-src/include -std=gnu++20 -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/CMakeFiles/nox-core.dir/cmake_pch.hxx -o CMakeFiles/nox-core.dir/src/test-input.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/test-input.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/src/test-input.cpp",
+  "output": "CMakeFiles/nox-core.dir/src/test-input.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=gnu++20 -o CMakeFiles/nox-core-tests.dir/test/test-main.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/test-main.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/test-main.cpp",
+  "output": "CMakeFiles/nox-core-tests.dir/test/test-main.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=gnu++20 -o CMakeFiles/nox-core-tests.dir/test/exporter.test.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/exporter.test.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/exporter.test.cpp",
+  "output": "CMakeFiles/nox-core-tests.dir/test/exporter.test.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=gnu++20 -o CMakeFiles/nox-core-tests.dir/test/graph-builder.test.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/graph-builder.test.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/graph-builder.test.cpp",
+  "output": "CMakeFiles/nox-core-tests.dir/test/graph-builder.test.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/include -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=gnu++20 -o CMakeFiles/nox-core-tests.dir/test/parser.test.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/parser.test.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/test/parser.test.cpp",
+  "output": "CMakeFiles/nox-core-tests.dir/test/parser.test.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -std=c++20 -Wall -Wextra -Wpedantic -Winvalid-pch -x c++-header -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build/CMakeFiles/firefly.dir/cmake_pch.hxx -o CMakeFiles/firefly.dir/cmake_pch.hxx.gch -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build/CMakeFiles/firefly.dir/cmake_pch.hxx.cxx",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build/CMakeFiles/firefly.dir/cmake_pch.hxx.cxx",
+  "output": "_deps/firefly-build/CMakeFiles/firefly.dir/cmake_pch.hxx.gch"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -std=c++20 -Wall -Wextra -Wpedantic -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build/CMakeFiles/firefly.dir/cmake_pch.hxx -o CMakeFiles/firefly.dir/src/logger.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/src/logger.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/src/logger.cpp",
+  "output": "_deps/firefly-build/CMakeFiles/firefly.dir/src/logger.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -std=c++20 -Wall -Wextra -Wpedantic -Winvalid-pch -include /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build/CMakeFiles/firefly.dir/cmake_pch.hxx -o CMakeFiles/firefly.dir/src/log-registry.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/src/log-registry.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/src/log-registry.cpp",
+  "output": "_deps/firefly-build/CMakeFiles/firefly.dir/src/log-registry.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/include -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/test_firefly.dir/test/test_main.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/test/test_main.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/firefly-src/test/test_main.cpp",
+  "output": "_deps/firefly-build/CMakeFiles/test_firefly.dir/test/test_main.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/cimmerian.dir/src/test-group.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/src/test-group.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/src/test-group.cpp",
+  "output": "_deps/cimmerian-build/CMakeFiles/cimmerian.dir/src/test-group.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/cimmerian.dir/src/test-registry.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/src/test-registry.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/src/test-registry.cpp",
+  "output": "_deps/cimmerian-build/CMakeFiles/cimmerian.dir/src/test-registry.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/cimmerian.dir/src/test-runner.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/src/test-runner.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/src/test-runner.cpp",
+  "output": "_deps/cimmerian-build/CMakeFiles/cimmerian.dir/src/test-runner.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/test_Cimmerian.dir/test/test-main.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/test/test-main.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/test/test-main.cpp",
+  "output": "_deps/cimmerian-build/CMakeFiles/test_Cimmerian.dir/test/test-main.cpp.o"
+},
+{
+  "directory": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-build",
+  "command": "/usr/bin/c++  -I/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/include -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles/test_Cimmerian.dir/test/example.test.cpp.o -c /run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/test/example.test.cpp",
+  "file": "/run/media/deanwilson/FEARLESS_SSD/development/nox-core/build/_deps/cimmerian-src/test/example.test.cpp",
+  "output": "_deps/cimmerian-build/CMakeFiles/test_Cimmerian.dir/test/example.test.cpp.o"
+}
+]
