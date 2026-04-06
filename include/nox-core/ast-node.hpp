@@ -13,6 +13,7 @@ static const std::unordered_map<std::string, NodeKind> kindMap = {
     {"C++ base class specifier", NodeKind::ParentClass},
     {"CXXMethod", NodeKind::Function},
     {"inclusion directive", NodeKind::Include},
+    {"FieldDecl", NodeKind::Field},
 };
 
 struct ASTNode {
