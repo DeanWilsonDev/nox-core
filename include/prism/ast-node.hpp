@@ -3,7 +3,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace NoxCore {
+namespace Prism {
 
 enum NodeKind { Project, Module, Namespace, Class, Struct, ParentClass, Include, Function, Field };
 
@@ -27,4 +27,4 @@ struct ASTNode {
   std::string referencedName;
 };
 
-}  // namespace NoxCore
+}  // namespace Prism

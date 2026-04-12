@@ -3,7 +3,7 @@
 #include <firefly/log.hpp>
 #include <memory>
 
-namespace NoxCore {
+namespace Prism {
 namespace Logging {
 
 #ifdef NOX_CORE_PLATFORM_MACOS
@@ -22,4 +22,4 @@ class Log {
   NOX_CORE_API static void Init(std::string fileName, bool enableClientDebugLogging = true);
 };
 }  // namespace Logging
-}  // namespace NoxCore
+}  // namespace Prism

@@ -1,7 +1,7 @@
 #include <clang-c/CXSourceLocation.h>
 #include <clang-c/Index.h>
 #include <iostream>
-#include "nox-core/ast-node.hpp"
+#include "prism/ast-node.hpp"
 
 std::string ToString(CXString value)
 {
@@ -28,14 +28,16 @@ void PrintCursor(CXCursor cursor)
             << "File: " << fileName << " Line: " << line << " Column: " << column << std::endl;
 }
 
-// NoxCore::NodeKind GetNodeKindFromString(std::string kind)
+// Prism::NodeKind GetNodeKindFromString(std::string kind)
 // {
+//
+//
 //
 // }
 
-NoxCore::ASTNode BuildAstNode(CXCursor cursor)
+Prism::ASTNode BuildAstNode(CXCursor cursor)
 {
-  NoxCore::ASTNode node;
+  Prism::ASTNode node;
   node.name = ToString(clang_getCursorSpelling(cursor));
   // node.kind = ToString(clang_getCursorKindSpelling(cursor.kind));
   std::string typeStr = ToString(clang_getTypeSpelling(clang_getCursorType(cursor)));
@@ -96,7 +98,13 @@ int main()
   CXIndex index = clang_createIndex(0, 0);
 
   CXTranslationUnit unit = clang_parseTranslationUnit(
-      index, "src/test-input.cpp", nullptr, 0, nullptr, 0, CXTranslationUnit_DetailedPreprocessingRecord
+      index,
+      "src/test-input.cpp",
+      nullptr,
+      0,
+      nullptr,
+      0,
+      CXTranslationUnit_DetailedPreprocessingRecord
   );
 
   CXCursor rootCursor = clang_getTranslationUnitCursor(unit);

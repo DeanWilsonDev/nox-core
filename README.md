@@ -1,15 +1,15 @@
-# Nox Core
+# Prism
 
 A standalone, headless C++ analysis engine. Accepts a C++ repository as input, analyses its structure, and produces a structured `analysis.json` file describing the codebase in full.
 
-Nox Core is a pure data pipeline — no UI, no rendering, no window management. It can be run from a terminal, a CI job, or a build script. The primary consumer of its output is [Pharos](../pharos), the architecture visualisation UI, but the output schema is tool-agnostic.
+Prism is a pure data pipeline — no UI, no rendering, no window management. It can be run from a terminal, a CI job, or a build script. The primary consumer of its output is [Pharos](../pharos), the architecture visualisation UI, but the output schema is tool-agnostic.
 
 ______________________________________________________________________
 
 ## Usage
 
 ```bash
-nox-core --project /path/to/repo --output analysis.json
+prism --project /path/to/repo --output analysis.json
 ```
 
 ### Options
@@ -28,7 +28,7 @@ ______________________________________________________________________
 
 ## Pipeline
 
-Nox Core processes a repository in four sequential stages:
+Prism processes a repository in four sequential stages:
 
 ```
 Repository (source files + compile_commands.json)
@@ -84,7 +84,7 @@ ______________________________________________________________________
   "metadata": {
     "project": "UmbraEngine",
     "generated_at": "2025-01-01T00:00:00Z",
-    "nox_core_version": "0.1.0",
+    "prism_version": "0.1.0",
     "file_count": 312,
     "node_count": 1840,
     "edge_count": 4201
@@ -105,7 +105,7 @@ ______________________________________________________________________
 ## Project Structure
 
 ```
-nox-core/
+prism/
 ├── CMakeLists.txt
 ├── main.cpp
 ├── include/
@@ -159,21 +159,21 @@ cmake --build build
 To run the test suite:
 
 ```bash
-cmake --build build --target nox_core_tests
-./build/nox_core_tests
+cmake --build build --target prism_tests
+./build/prism_tests
 ```
 
 ______________________________________________________________________
 
 ## Relationship to Pharos
 
-Nox Core is a dependency of Pharos, not a component of it. The boundary is `analysis.json`.
+Prism is a dependency of Pharos, not a component of it. The boundary is `analysis.json`.
 
 ```
-nox-core  ──produces──▶  analysis.json  ──consumed by──▶  pharos
+prism  ──produces──▶  analysis.json  ──consumed by──▶  pharos
 ```
 
-Pharos does not call into Nox Core at runtime — it reads the output file. This means Nox Core can be run separately and its output cached, and Pharos can be developed and tested against a static `analysis.json` without running the full analysis pipeline.
+Pharos does not call into Prism at runtime — it reads the output file. This means Prism can be run separately and its output cached, and Pharos can be developed and tested against a static `analysis.json` without running the full analysis pipeline.
 
 ______________________________________________________________________
 

@@ -1,8 +1,8 @@
 #pragma once
 
-namespace NoxCore {
+namespace Prism {
 struct TestEquals {
  public:
   int index;
 };
-}  // namespace NoxCore
+}  // namespace Prism

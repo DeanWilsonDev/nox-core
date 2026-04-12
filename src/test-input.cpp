@@ -6,7 +6,7 @@ namespace Tester {
 class TestInputBase {
  protected:
   std::string helloWorld = {"Hello World"};
-  NoxCore::TestEquals equals;
+  Prism::TestEquals equals;
 };
 
 class TestInput : TestInputBase {
