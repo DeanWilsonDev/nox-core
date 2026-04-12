@@ -1,7 +1,12 @@
 #include <clang-c/CXSourceLocation.h>
 #include <clang-c/Index.h>
 #include <iostream>
+#include "firefly/log.hpp"
+#include "nlohmann/json_fwd.hpp"
 #include "prism/ast-node.hpp"
+#include "prism/json-serialization.hpp"
+#include <filesystem>
+#include <unordered_set>
 
 std::string ToString(CXString value)
 {
@@ -10,51 +15,94 @@ std::string ToString(CXString value)
   return str;
 }
 
-void PrintCursor(CXCursor cursor)
+nlohmann::json ToJson(const Prism::ASTNode& node)
 {
-  std::string nameStr = ToString(clang_getCursorSpelling(cursor));
-  std::string kindStr = ToString(clang_getCursorKindSpelling(cursor.kind));
-  std::string typeStr = ToString(clang_getTypeSpelling(clang_getCursorType(cursor)));
-  CXSourceLocation location = clang_getCursorLocation(cursor);
-
-  CXFile file;
-  unsigned line, column, offset;
-
-  clang_getExpansionLocation(location, &file, &line, &column, &offset);
-
-  std::string fileName = ToString(clang_getFileName(file));
-
-  std::cout << "Found: " << "<" << typeStr << "> " << nameStr << " [" << kindStr << "] "
-            << "File: " << fileName << " Line: " << line << " Column: " << column << std::endl;
+  return nlohmann::json{
+      {"id", node.id},
+      {"name", node.name},
+      {"type", node.type},
+      {"kind", Prism::ToStringFromNodeKind(node.kind)},
+      {"file", node.file},
+      {"line", node.line},
+      {"column", node.column},
+      {"physical_parent", node.physicalParent},
+      {"logical_parent", node.logicalParent},
+      {"referenced_name", node.referencedName},
+  };
 }
 
-// Prism::NodeKind GetNodeKindFromString(std::string kind)
-// {
-//
-//
-//
-// }
+// TODO: Configure this somewhere at the top level:
+std::string projectName = "Prism";
+
+std::optional<Prism::NodeKind> GetNodeKindFromString(std::string kind)
+{
+  auto iterator = Prism::kindMap.find(kind);
+  if (iterator != Prism::kindMap.end()) {
+    return iterator->second;
+  }
+  LOG_WARNING("Mapping of kind [{}] was not found", kind);
+  return std::nullopt;
+}
 
 Prism::ASTNode BuildAstNode(CXCursor cursor)
 {
   Prism::ASTNode node;
   node.name = ToString(clang_getCursorSpelling(cursor));
-  // node.kind = ToString(clang_getCursorKindSpelling(cursor.kind));
+
   std::string typeStr = ToString(clang_getTypeSpelling(clang_getCursorType(cursor)));
+  node.type = typeStr;
+
+  std::string kindStr = ToString(clang_getCursorKindSpelling(cursor.kind));
+  auto kind = GetNodeKindFromString(kindStr);
+  if (kind.has_value()) {
+    node.kind = kind.value();
+  }
+
   CXSourceLocation location = clang_getCursorLocation(cursor);
 
   CXFile file;
   unsigned line, column, offset;
-
   clang_getExpansionLocation(location, &file, &line, &column, &offset);
+  std::string filePath = ToString(clang_getFileName(file));
+  node.line = line;
+  node.column = column;
 
-  std::string fileName = ToString(clang_getFileName(file));
+  std::filesystem::path fullPath(
+      "/run/media/deanwilson/FEARLESS_SSD/development/prism/src/example/test-input.cpp"
+  );
+  std::filesystem::path projectRoot("/run/media/deanwilson/FEARLESS_SSD/development/prism/src");
+  std::filesystem::path relativePath = std::filesystem::relative(fullPath, projectRoot);
+
+  std::string parentId = projectName;
+
+  std::string fileName = relativePath.filename();
+  std::string moduleId = projectName;
+
+  std::string parentDirectory = relativePath.parent_path();
+
+  for (const std::filesystem::path& segment : relativePath) {
+    if (segment == fileName) {
+      break;
+    }
+
+    moduleId = projectName + "::" + segment.string();
+
+    parentId = moduleId;
+  }
+
+  node.physicalParent = parentId;
+  node.file = fileName;
+
+  nlohmann::json nodeJson = ToJson(node);
+  std::cout << nodeJson.dump(2) << std::endl;
+
   return node;
 }
 
 CXChildVisitResult Visitor(CXCursor cursor, CXCursor parent, CXClientData data)
 {
   CXSourceLocation location = clang_getCursorLocation(cursor);
+  Prism::ASTNode node;
   if (!clang_Location_isFromMainFile(location)) {
     return CXChildVisit_Continue;
   }
@@ -63,28 +111,14 @@ CXChildVisitResult Visitor(CXCursor cursor, CXCursor parent, CXClientData data)
 
   switch (kind) {
     case CXCursor_Namespace:
-      PrintCursor(cursor);
-      break;
     case CXCursor_ClassDecl:
-      PrintCursor(cursor);
-      break;
     case CXCursor_StructDecl:
-      PrintCursor(cursor);
-      break;
     case CXCursor_FunctionDecl:
-      PrintCursor(cursor);
-      break;
     case CXCursor_CXXMethod:
-      PrintCursor(cursor);
-      break;
     case CXCursor_FieldDecl:
-      PrintCursor(cursor);
-      break;
     case CXCursor_InclusionDirective:
-      PrintCursor(cursor);
-      break;
     case CXCursor_CXXBaseSpecifier:
-      PrintCursor(cursor);
+      node = BuildAstNode(cursor);
       break;
     default:
       break;
@@ -99,13 +133,17 @@ int main()
 
   CXTranslationUnit unit = clang_parseTranslationUnit(
       index,
-      "src/test-input.cpp",
+      "src/example/test-input.cpp",
       nullptr,
       0,
       nullptr,
       0,
       CXTranslationUnit_DetailedPreprocessingRecord
   );
+
+  if (unit == nullptr) {
+    return 1;
+  }
 
   CXCursor rootCursor = clang_getTranslationUnitCursor(unit);
 

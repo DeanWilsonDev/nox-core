@@ -49,7 +49,7 @@ find_package(Clang REQUIRED CONFIG)
 
 add_executable(
   ${PROJECT_NAME} src/main.cpp src/parser.cpp src/dependency-graph.cpp
-                  src/metrics-engine.cpp src/exporter.cpp src/test-input.cpp)
+                  src/metrics-engine.cpp src/exporter.cpp src/example/test-input.cpp)
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE include/pch.hpp)
 
